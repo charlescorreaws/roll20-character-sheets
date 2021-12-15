@@ -1,4 +1,49 @@
 /*Configure the tab buttons*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, b, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 .sheet-character,
 .sheet-config,
 .sheet-journal {
@@ -14,13 +59,19 @@
 
 
 img {
-  max-height: 100px;
+	max-height: 100px;
 }
 
 /* Background */
 .charsheet {
-  background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Kalymba/Background.jpg?raw=true); /*black space with tiny white stars*/
-  color: Black;
+	background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Kalymba/Background.jpg?raw=true); /*black space with tiny white stars*/
+	background-repeat: no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center right;
+	color: Black;
 }
 
 /* Set the min-width so that when the window is resized the look will stay consistant */
@@ -39,13 +90,22 @@ h2 {
 }
 
 label {
-	display: inline-block;
+	display: block;
 	width: 31%;
 }
 
 input {
-	display: inline-block;
+	display: block;
 	width: 165px;
+}
+
+.ui-dialog .charsheet button[type=roll], .ui-dialog .charsheet button[type=compendium]{
+	  font-size: 2em;
+    margin: 0px 3px 0px 3px;
+
+}
+.ui-dialog .charsheet input[type=number] {
+    width: 4.5em;
 }
 
 img {
@@ -62,8 +122,8 @@ input.sheet-short {
 }
 
 select.sheet-dtype {
-    vertical-align: top;
-    width: 60px;
+	vertical-align: top;
+	width: 60px;
 }
 span.sheet-dee {
 	font-size: 1.4em;
@@ -91,7 +151,7 @@ span.sheet-dee {
 }
 
 .sheet-grid-section {
-  display: grid;
-  grid-template-columns: 600px 300px;
-  grid-template-rows: 150px 150px 150px;
+	display: grid;
+	grid-template-columns: 600px 300px;
+	grid-template-rows: 150px 150px 150px;
 }
